@@ -28,6 +28,20 @@ class AddRecordViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func saveBtnTapped(_ sender: Any) {
         
+        let uuid = UUID().uuidString
+        
+        let stringFromDate = Date().iso8601
+        
+        if let dateFromString = stringFromDate.dateFromISO8601 {
+            
+            if nameField.text  != "" && Int(quantityCount.text!) != nil {
+                
+                RecordManager.shared.addRecord(name: nameField.text!, quantity: Int(quantityCount.text!)!, date: dateFromString, synched: false, uuid: uuid)
+            }
+            goToInitialView()
+        }
+
+        
     }
     
     func goToInitialView() {

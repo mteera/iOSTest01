@@ -74,6 +74,39 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		B5B56C301F71790F000E211D /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				B5B56C2C1F7175E5000E211D /* RecordManager.swift */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		B5B56C311F717925000E211D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5B56C281F717434000E211D /* InitialViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		B5B56C321F717961000E211D /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				B5B56C1D1F716F32000E211D /* RecordCell.swift */,
+				B5B56C2E1F71767D000E211D /* RecordDetailViewController.swift */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
+		B5B56C331F71796B000E211D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5D1AD2E1F70152F00CDC374 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		B5D1AD1E1F70152F00CDC374 = {
 			isa = PBXGroup;
 			children = (
@@ -95,15 +128,14 @@
 			children = (
 				B5D1AD2A1F70152F00CDC374 /* AppDelegate.swift */,
 				B5D1AD2C1F70152F00CDC374 /* MainViewController.swift */,
-				B5D1AD2E1F70152F00CDC374 /* Main.storyboard */,
-				B5B56C1D1F716F32000E211D /* RecordCell.swift */,
-				B5B56C281F717434000E211D /* InitialViewController.swift */,
-				B5B56C2C1F7175E5000E211D /* RecordManager.swift */,
-				B5B56C2E1F71767D000E211D /* RecordDetailViewController.swift */,
+				B5B56C321F717961000E211D /* Record */,
+				B5B56C311F717925000E211D /* ViewController */,
+				B5B56C301F71790F000E211D /* Modal */,
 				B5B56C1C1F716EA6000E211D /* Add New Record */,
 				B5D1AD341F70152F00CDC374 /* Assets.xcassets */,
 				B5D1AD361F70152F00CDC374 /* LaunchScreen.storyboard */,
 				B5D1AD391F70152F00CDC374 /* Info.plist */,
+				B5B56C331F71796B000E211D /* Views */,
 				B5B56C271F7173E9000E211D /* Extensions */,
 				B5D1AD431F7017DC00CDC374 /* CoreData */,
 			);
