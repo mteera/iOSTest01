@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Records-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="iOSTest01" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordCell" rowHeight="54" id="GFp-dk-TNp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordCell" rowHeight="54" id="GFp-dk-TNp" customClass="RecordCell" customModule="iOSTest01" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GFp-dk-TNp" id="pM9-qM-bua">
@@ -45,11 +45,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quantity:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5a-8c-UGt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5a-8c-UGt">
                                                     <rect key="frame" x="247" y="0.0" width="120" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="PXD-C4-UzP"/>
-                                                        <constraint firstAttribute="width" constant="120" id="l8B-6N-atf"/>
+                                                        <constraint firstAttribute="height" constant="21" id="avx-p1-jyD"/>
+                                                        <constraint firstAttribute="width" constant="120" id="xSH-EK-2i0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -57,18 +57,21 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="trailing" secondItem="pM9-qM-bua" secondAttribute="trailingMargin" id="FgB-fA-7tu"/>
-                                                <constraint firstItem="1aS-OG-xHW" firstAttribute="centerY" secondItem="pM9-qM-bua" secondAttribute="centerY" id="MjY-R3-0lt"/>
-                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="top" secondItem="pM9-qM-bua" secondAttribute="topMargin" id="RT4-FM-bbg"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="KKc-QK-T4l" secondAttribute="bottom" constant="-7.5" id="VD7-pU-kTz"/>
-                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="trailing" secondItem="KKc-QK-T4l" secondAttribute="trailing" id="XBf-y6-5N9"/>
-                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="leading" secondItem="1aS-OG-xHW" secondAttribute="trailing" constant="8" symbolic="YES" id="cqP-6F-IvI"/>
-                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="leading" secondItem="KKc-QK-T4l" secondAttribute="leading" id="n13-c3-vwd"/>
-                                                <constraint firstItem="KKc-QK-T4l" firstAttribute="top" secondItem="o5a-8c-UGt" secondAttribute="bottom" constant="3" id="vGT-SG-19i"/>
-                                                <constraint firstItem="1aS-OG-xHW" firstAttribute="leading" secondItem="pM9-qM-bua" secondAttribute="leadingMargin" id="wZx-D1-BCL"/>
+                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="top" secondItem="pM9-qM-bua" secondAttribute="top" id="Cj4-GE-r7G"/>
+                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="leading" secondItem="KKc-QK-T4l" secondAttribute="leading" id="JBI-dV-bfa"/>
+                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="trailing" secondItem="KKc-QK-T4l" secondAttribute="trailing" id="Jqr-jZ-1xX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KKc-QK-T4l" secondAttribute="bottom" constant="-7.5" id="Q8Q-yt-dsc"/>
+                                                <constraint firstItem="KKc-QK-T4l" firstAttribute="top" secondItem="o5a-8c-UGt" secondAttribute="bottom" constant="11" id="U8a-HA-Ugp"/>
+                                                <constraint firstItem="1aS-OG-xHW" firstAttribute="leading" secondItem="pM9-qM-bua" secondAttribute="leadingMargin" id="ZqT-oe-NlU"/>
+                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="trailing" secondItem="pM9-qM-bua" secondAttribute="trailingMargin" id="gza-3r-Z4K"/>
+                                                <constraint firstItem="1aS-OG-xHW" firstAttribute="centerY" secondItem="pM9-qM-bua" secondAttribute="centerY" id="mIq-0u-xp7"/>
+                                                <constraint firstItem="o5a-8c-UGt" firstAttribute="leading" secondItem="1aS-OG-xHW" secondAttribute="trailing" constant="8" symbolic="YES" id="qHJ-Ks-duu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLbl" destination="KKc-QK-T4l" id="Tlr-5Y-k4L"/>
+                                            <outlet property="nameLbl" destination="1aS-OG-xHW" id="QDP-40-G96"/>
+                                            <outlet property="quantityLbl" destination="o5a-8c-UGt" id="jbr-SC-MuR"/>
                                             <segue destination="5kW-ut-bL4" kind="show" id="tI1-AI-suI"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,8 +86,8 @@
                             <constraint firstItem="Dbx-Qk-j8T" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="mMH-yi-rdl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JQj-hI-XL2">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="D1t-cz-mT8">
+                    <navigationItem key="navigationItem" title="Records" id="JQj-hI-XL2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="D1t-cz-mT8">
                             <connections>
                                 <segue destination="23F-sI-oqZ" kind="show" id="vIc-nC-P11"/>
                             </connections>
@@ -161,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="1057" y="838"/>
         </scene>
-        <!--Add a Recording-->
+        <!--Add a Record-->
         <scene sceneID="P5G-AK-mCa">
             <objects>
-                <viewController id="23F-sI-oqZ" sceneMemberID="viewController">
+                <viewController id="23F-sI-oqZ" customClass="AddRecordViewController" customModule="iOSTest01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wl3-5g-6sp"/>
                         <viewControllerLayoutGuide type="bottom" id="BHo-1O-a8B"/>
@@ -193,6 +196,9 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="y6h-VQ-gAu">
                                 <rect key="frame" x="265" y="167" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperBtnTapped:" destination="23F-sI-oqZ" eventType="valueChanged" id="HOu-Tr-PTd"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvE-e4-UMq">
                                 <rect key="frame" x="33" y="196" width="8" height="21"/>
@@ -216,18 +222,27 @@
                             <constraint firstItem="1x3-0s-a1c" firstAttribute="top" secondItem="y6h-VQ-gAu" secondAttribute="top" id="xig-BC-99M"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add a Recording" id="aSY-ic-jcQ">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="bF9-zW-NOF"/>
+                    <navigationItem key="navigationItem" title="Add a Record" id="NGW-gv-qsu">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="UzY-2R-tuY">
+                            <connections>
+                                <action selector="saveBtnTapped:" destination="23F-sI-oqZ" id="7gr-wc-OaM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameField" destination="PY7-mz-9Oi" id="eyZ-hi-GBQ"/>
+                        <outlet property="quantityCount" destination="yvE-e4-UMq" id="eLz-5M-u8z"/>
+                        <outlet property="stepper" destination="y6h-VQ-gAu" id="yU0-VM-fYm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kb3-yY-Qen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1964" y="123.68815592203899"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="PQg-lv-8yf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Rk-bq-h1b" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Rk-bq-h1b" customClass="InitialViewController" customModule="iOSTest01" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6e-OK-ghL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

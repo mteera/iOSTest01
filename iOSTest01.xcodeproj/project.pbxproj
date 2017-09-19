@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5B56C191F716E49000E211D /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B56C181F716E49000E211D /* AddRecordViewController.swift */; };
+		B5B56C1E1F716F32000E211D /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B56C1D1F716F32000E211D /* RecordCell.swift */; };
+		B5B56C241F7173E0000E211D /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B56C231F7173E0000E211D /* CurrentDate.swift */; };
+		B5B56C261F7173E5000E211D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B56C251F7173E5000E211D /* Reachability.swift */; };
+		B5B56C291F717434000E211D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B56C281F717434000E211D /* InitialViewController.swift */; };
 		B5D1AD2B1F70152F00CDC374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1AD2A1F70152F00CDC374 /* AppDelegate.swift */; };
 		B5D1AD2D1F70152F00CDC374 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1AD2C1F70152F00CDC374 /* MainViewController.swift */; };
 		B5D1AD301F70152F00CDC374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D1AD2E1F70152F00CDC374 /* Main.storyboard */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5B56C181F716E49000E211D /* AddRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
+		B5B56C1D1F716F32000E211D /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordCell.swift; path = ../RecordCell.swift; sourceTree = "<group>"; };
+		B5B56C231F7173E0000E211D /* CurrentDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
+		B5B56C251F7173E5000E211D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B5B56C281F717434000E211D /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		B5D1AD271F70152F00CDC374 /* iOSTest01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D1AD2A1F70152F00CDC374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D1AD2C1F70152F00CDC374 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +51,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5B56C1C1F716EA6000E211D /* Add New Record */ = {
+			isa = PBXGroup;
+			children = (
+				B5B56C181F716E49000E211D /* AddRecordViewController.swift */,
+			);
+			name = "Add New Record";
+			sourceTree = "<group>";
+		};
+		B5B56C271F7173E9000E211D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5B56C251F7173E5000E211D /* Reachability.swift */,
+				B5B56C231F7173E0000E211D /* CurrentDate.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		B5D1AD1E1F70152F00CDC374 = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +90,13 @@
 				B5D1AD2A1F70152F00CDC374 /* AppDelegate.swift */,
 				B5D1AD2C1F70152F00CDC374 /* MainViewController.swift */,
 				B5D1AD2E1F70152F00CDC374 /* Main.storyboard */,
+				B5B56C1D1F716F32000E211D /* RecordCell.swift */,
+				B5B56C281F717434000E211D /* InitialViewController.swift */,
+				B5B56C1C1F716EA6000E211D /* Add New Record */,
 				B5D1AD341F70152F00CDC374 /* Assets.xcassets */,
 				B5D1AD361F70152F00CDC374 /* LaunchScreen.storyboard */,
 				B5D1AD391F70152F00CDC374 /* Info.plist */,
+				B5B56C271F7173E9000E211D /* Extensions */,
 				B5D1AD431F7017DC00CDC374 /* CoreData */,
 			);
 			path = iOSTest01;
@@ -156,8 +187,13 @@
 				B5D1AD421F7017C100CDC374 /* Record+CoreDataProperties.swift in Sources */,
 				B5D1AD411F7017C100CDC374 /* Record+CoreDataClass.swift in Sources */,
 				B5D1AD2D1F70152F00CDC374 /* MainViewController.swift in Sources */,
+				B5B56C1E1F716F32000E211D /* RecordCell.swift in Sources */,
 				B5D1AD2B1F70152F00CDC374 /* AppDelegate.swift in Sources */,
+				B5B56C291F717434000E211D /* InitialViewController.swift in Sources */,
+				B5B56C261F7173E5000E211D /* Reachability.swift in Sources */,
+				B5B56C241F7173E0000E211D /* CurrentDate.swift in Sources */,
 				B5D1AD331F70152F00CDC374 /* iOSTest01.xcdatamodeld in Sources */,
+				B5B56C191F716E49000E211D /* AddRecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
