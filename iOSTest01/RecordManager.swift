@@ -26,6 +26,7 @@ class RecordManager {
         record.date = date as Date
         record.synched = synched
         record.uuid = uuid
+        records.append(record)
         PersistenceService.saveContext()
     }
     
@@ -73,7 +74,7 @@ class RecordManager {
     func fetchRecord() -> [Record] {
 
         do {
-            records = try context.fetch(Record.fetchRequest())
+            records = try context.fetch(request)
 
         } catch {
             print("Error fetching data from CoreData")

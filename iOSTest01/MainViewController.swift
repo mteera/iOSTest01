@@ -45,7 +45,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.nameLbl.text = records[indexPath.row].name
         cell.quantityLbl.text = "Quantity: \(String(records[indexPath.row].quantity))"
-        cell.dateLbl.text = dateString(date: records[indexPath.row].date as! Date)
+        cell.dateLbl.text = dateString(date: records[indexPath.row].date! as Date)
         
         return cell
     }
