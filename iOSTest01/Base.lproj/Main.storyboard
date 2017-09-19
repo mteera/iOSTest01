@@ -104,7 +104,7 @@
         <!--Record Detail-->
         <scene sceneID="grG-e4-RvD">
             <objects>
-                <viewController id="5kW-ut-bL4" sceneMemberID="viewController">
+                <viewController id="5kW-ut-bL4" customClass="RecordDetailViewController" customModule="iOSTest01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gW3-DG-1WE"/>
                         <viewControllerLayoutGuide type="bottom" id="7Si-wO-Ea8"/>
@@ -133,6 +133,9 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="49R-F9-4e1">
                                 <rect key="frame" x="265" y="176" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepper:" destination="5kW-ut-bL4" eventType="valueChanged" id="wQk-OZ-y6K"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap5-Jh-Gvu">
                                 <rect key="frame" x="33" y="205" width="8" height="21"/>
@@ -157,8 +160,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record Detail" id="RUX-3a-6zY">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="x5Y-H2-ZyF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="x5Y-H2-ZyF">
+                            <connections>
+                                <action selector="saveBtnTapped:" destination="5kW-ut-bL4" id="JBW-Va-pfU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameField" destination="rfz-i2-sgN" id="hee-6t-gkS"/>
+                        <outlet property="quantityCount" destination="ap5-Jh-Gvu" id="yXb-VY-Fii"/>
+                        <outlet property="stepper" destination="49R-F9-4e1" id="r4I-2B-38H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfS-si-N9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

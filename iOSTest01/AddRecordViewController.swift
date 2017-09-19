@@ -9,7 +9,7 @@
 import UIKit
 
 class AddRecordViewController: UIViewController, UITextFieldDelegate {
-
+    // Mark: Outlets
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var quantityCount: UILabel!
     @IBOutlet weak var stepper: UIStepper!

@@ -3,7 +3,7 @@
 //  BOPH
 //
 //  Created by Chace Teera on 10/09/2017.
-//  Copyright © 2017 chaceteera. All rights reserved.
+//  Copyright © 2017 Beep!. All rights reserved.
 //
 
 import Foundation

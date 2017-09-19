@@ -9,7 +9,7 @@
 import UIKit
 
 class RecordCell: UITableViewCell {
-
+    // Mark: Outlets
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var quantityLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
