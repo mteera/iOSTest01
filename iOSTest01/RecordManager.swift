@@ -23,7 +23,7 @@ class RecordManager {
         let record = Record(context:context)
         record.name = name
         record.quantity = Int16(quantity)
-        record.date = date as NSDate
+        record.date = date as Date
         record.synched = synched
         record.uuid = uuid
         PersistenceService.saveContext()
@@ -60,7 +60,7 @@ class RecordManager {
                     record.name = name
                     record.quantity = Int16(quantity)
                     record.synched = synched
-                    record.date = date as NSDate
+                    record.date = date as Date
                     
                 }
             }
@@ -70,22 +70,18 @@ class RecordManager {
         PersistenceService.saveContext()
     }
     
-    //    func fetchRecord() -> [Record] {
-    //
-    //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Record")
-    //        fetchRequest.resultType = .dictionaryResultType
-    //
-    //        do {
-    //            records = try context.fetch(fetchRequest)
-    //            print(records)
-    //
-    //        } catch {
-    //            print("Error fetching data from CoreData")
-    //        }
+    func fetchRecord() -> [Record] {
+
+        do {
+            records = try context.fetch(Record.fetchRequest())
+
+        } catch {
+            print("Error fetching data from CoreData")
+        }
+
+        return records
+    }
     
-    //        return records
-    //    }
-    //    
     
     
 }

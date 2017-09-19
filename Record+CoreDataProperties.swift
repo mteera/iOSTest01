@@ -18,7 +18,7 @@ extension Record {
 
     @NSManaged public var name: String?
     @NSManaged public var quantity: Int16
-    @NSManaged public var date: NSDate?
+    @NSManaged public var date: Date?
     @NSManaged public var synched: Bool
     @NSManaged public var uuid: String?
 

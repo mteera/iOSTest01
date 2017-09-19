@@ -19,6 +19,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getData()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -31,7 +33,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func getData() {
         
-        
+        RecordManager.shared.fetchRecord()
         self.tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
