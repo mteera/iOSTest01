@@ -30,8 +30,8 @@ class RecordDetailViewController: UIViewController {
         super.viewDidLoad()
         
         nameField.text = record.name
-        quantityCount.text = String(record.quantity)
-        stepper.value = Double(record.quantity)
+//        quantityCount.text = String(record.quantity)
+//        stepper.value = Double(record.quantity)
         
     }
     
@@ -49,12 +49,8 @@ class RecordDetailViewController: UIViewController {
     
     @IBAction func saveBtnTapped(_ sender: Any) {
         
-        let stringFromDate = Date().iso8601
+        RecordManager.shared.editRecords(withUUID: record.record_id!, name: nameField.text!)
         
-        if let dateFromString = stringFromDate.dateFromISO8601 {
-            
-            RecordManager.shared.editRecords(withUUID: record.uuid!, name: nameField.text!, quantity: Int(quantityCount.text!)!, date: dateFromString, synched: false)
-        }
         dismissView()
     }
 }

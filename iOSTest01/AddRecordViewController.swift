@@ -30,14 +30,10 @@ class AddRecordViewController: UIViewController, UITextFieldDelegate {
         
         let uuid = UUID().uuidString
         
-        let stringFromDate = Date().iso8601
-        
-        if let dateFromString = stringFromDate.dateFromISO8601 {
-            
             if nameField.text  != "" && Int(quantityCount.text!) != nil {
                 
-                RecordManager.shared.addRecord(name: nameField.text!, quantity: Int(quantityCount.text!)!, date: dateFromString, synched: false, uuid: uuid)
-            }
+                RecordManager.shared.addRecord(name: nameField.text!, uuid: uuid)
+                
             goToInitialView()
         }
 

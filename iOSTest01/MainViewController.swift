@@ -20,6 +20,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        records = RecordManager.shared.sendRecordToServer()
+        
         getData()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -33,7 +35,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func getData() {
         
-        RecordManager.shared.fetchRecord()
+        records = RecordManager.shared.fetchRecord()
         self.tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,8 +46,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath) as! RecordCell
         
         cell.nameLbl.text = records[indexPath.row].name
-        cell.quantityLbl.text = "Quantity: \(String(records[indexPath.row].quantity))"
-        cell.dateLbl.text = dateString(date: records[indexPath.row].date! as Date)
+//        cell.quantityLbl.text = "Quantity: \(String(records[indexPath.row].quantity))"
+//        cell.dateLbl.text = dateString(date: records[indexPath.row].date! as Date)
         
         return cell
     }
@@ -56,7 +58,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             // delete task
             let record = records[indexPath.row]
-            RecordManager.shared.removeRecord(withUUID: record.uuid!)
+            RecordManager.shared.removeRecord(withUUID: record.record_id!)
             
             //animation
             records.remove(at: indexPath.row)
